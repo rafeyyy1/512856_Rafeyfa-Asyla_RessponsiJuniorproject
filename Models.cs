@@ -8,32 +8,32 @@ namespace ResponsiraFeyfa.Models
 
         public int Id
         {
-            get { return id; }
-            set { id = value; }
+     get { return id; }
+   set { id = value; }
         }
     }
 
     public class Proyek : BaseEntity
     {
-      private string namaProyek = string.Empty;
+  private string namaProyek = string.Empty;
       private string client = string.Empty;
-      private decimal budget;
+ private decimal budget;
 
         public string NamaProyek
         {
-            get { return namaProyek; }
+    get { return namaProyek; }
             set { namaProyek = value; }
       }
 
     public string Client
       {
-            get { return client; }
+      get { return client; }
             set { client = value; }
         }
 
         public decimal Budget
    {
-          get { return budget; }
+            get { return budget; }
           set { budget = value; }
         }
 
@@ -43,10 +43,10 @@ namespace ResponsiraFeyfa.Models
 
     public Proyek(int id, string namaProyek, string client, decimal budget)
         {
-            this.Id = id;
-                this.namaProyek = namaProyek;
-                this.client = client;
-                this.budget = budget;
+  this.Id = id;
+      this.namaProyek = namaProyek;
+       this.client = client;
+ this.budget = budget;
         }
 
         public override string ToString()
@@ -62,84 +62,34 @@ namespace ResponsiraFeyfa.Models
     /// </summary>
     public class DeveloperFulltime : Developer
     {
-        private const decimal GajiPokok = 5000000m;
-        private const decimal SkorMultiplier = 20000m;
+    private const decimal GajiPokok = 5000000m;
+   private const decimal SkorMultiplier = 20000m;
 
         public DeveloperFulltime() : base() { }
 
      public DeveloperFulltime(int id, string namaDeveloper, int idProyek, int fiturSelesai, int jumlahBug)
       : base(id, namaDeveloper, idProyek, "Fulltime", fiturSelesai, jumlahBug)
-     {
-        }
+   {
+  }
 
-        /// <summary>
+ /// <summary>
         /// Hitung SKOR untuk Fulltime: SKOR = (10 * Fitur) - (5 * Bug)
         /// </summary>
         public override int CalculateSkor()
-        {
-            int skor = (10 * FiturSelesai) - (5 * JumlahBug);
+   {
+      int skor = (10 * FiturSelesai) - (5 * JumlahBug);
             return Math.Max(0, skor);
         }
 
         /// <summary>
         /// Hitung Total Gaji untuk Fulltime: GajiPokok + (SKOR * 20.000)
-        /// </summary>
+  /// </summary>
         public override decimal CalculateTotalGaji()
-        {
+ {
             int skor = CalculateSkor();
-            return GajiPokok + (skor * SkorMultiplier);
+ return GajiPokok + (skor * SkorMultiplier);
         }
-    }
-
-    /// <summary>
-    /// Freelance Developer - Inheritance dari Developer
-    /// SKOR = (100 * (1 - (2 * Bug) / (3 * Fitur)))
-  /// Total Gaji:
-    /// - SKOR >= 80: 500.000 * Fitur
-    /// - SKOR >= 50: 400.000 * Fitur
-    /// - SKOR < 50: 250.000 * Fitur
-    /// </summary>
-    public class DeveloperFreelance : Developer
-    {
-      private const decimal HighRatePerFitur = 500000m;   // SKOR >= 80
-        private const decimal MediumRatePerFitur = 400000m; // SKOR >= 50
-        private const decimal LowRatePerFitur = 250000m;       // SKOR < 50
-
-  public DeveloperFreelance() : base() { }
-
-        public DeveloperFreelance(int id, string namaDeveloper, int idProyek, int fiturSelesai, int jumlahBug)
-            : base(id, namaDeveloper, idProyek, "Freelance", fiturSelesai, jumlahBug)
-      {
-        }
-
-        /// <summary>
-        /// Hitung SKOR untuk Freelance: SKOR = (100 * (1 - (2 * Bug) / (3 * Fitur)))
-        /// </summary>
-   public override int CalculateSkor()
-        {
-    if (FiturSelesai == 0)
-           return 0;
-
-            double skorHitung = 100 * (1 - ((2.0 * JumlahBug) / (3.0 * FiturSelesai)));
-      int skor = (int)Math.Round(skorHitung);
-            return Math.Max(0, skor);
-    }
-
-        /// <summary>
-  /// Hitung Total Gaji untuk Freelance berdasarkan SKOR
-        /// </summary>
-  public override decimal CalculateTotalGaji()
-        {
-            int skor = CalculateSkor();
-
-    if (skor >= 80)
-    return HighRatePerFitur * FiturSelesai;
-            else if (skor >= 50 && skor < 80)
-return MediumRatePerFitur * FiturSelesai;
-         else // SKOR < 50
-              return LowRatePerFitur * FiturSelesai;
-        }
-    }
+  }
 
     public abstract class Developer : BaseEntity
     {

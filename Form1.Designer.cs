@@ -116,7 +116,7 @@ namespace ResponsiraFeyfa
             // 
             cbStatusKontrak.Font = new Font("Calibri", 10F);
             cbStatusKontrak.FormattingEnabled = true;
-            cbStatusKontrak.Items.AddRange(new object[] { "Freelance", "Fulltime" });
+            cbStatusKontrak.Items.AddRange(new object[] { "Freelance", "Fulltime", "Partime" });
             cbStatusKontrak.Location = new Point(149, 101);
             cbStatusKontrak.Margin = new Padding(3, 4, 3, 4);
             cbStatusKontrak.Name = "cbStatusKontrak";
@@ -247,7 +247,7 @@ namespace ResponsiraFeyfa
             // 
             btnUpdate.BackColor = Color.LightPink;
             btnUpdate.Font = new Font("Calibri", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnUpdate.Location = new Point(371, 454);
+            btnUpdate.Location = new Point(406, 454);
             btnUpdate.Margin = new Padding(3, 4, 3, 4);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(229, 53);
@@ -377,7 +377,7 @@ namespace ResponsiraFeyfa
         private Label label4;
         private Label label5;
         private ComboBox cbStatusKontrak;
-        private ComboBox cbProyek;
+   private ComboBox cbProyek;
         private GroupBox groupBox2;
         private Label label7;
         private Label label8;
@@ -387,11 +387,11 @@ namespace ResponsiraFeyfa
         private Label label6;
         private Label label9;
         private GroupBox groupBox4;
-        private DataGridView dgvDeveloper;
-        private DataGridView dgvProyek;
+    private DataGridView dgvDeveloper;
+  private DataGridView dgvProyek;
         private Button btnInsert;
-        private Button btnUpdate;
-        private Button btnDelete;
+ private Button btnUpdate;
+      private Button btnDelete;
         private GroupBox groupBox3;
         private PictureBox pictureBox1;
     }

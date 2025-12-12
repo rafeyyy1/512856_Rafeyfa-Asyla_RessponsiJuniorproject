@@ -8,7 +8,7 @@ namespace ResponsiraFeyfa
     {
         // ========== ENCAPSULATION - Private Fields ==========
         private static string _connectionString =
-          "Host=localhost;Port=5432;Database=responsirafeyfa;Username=postgre;Password=informatika";
+          "Host=localhost;Port=5432;Database=responsirafeyfa;Username=postgresss;Password=informatika";
 
         // ========== ENCAPSULATION - Properties dengan Validation ==========
       /// <summary>

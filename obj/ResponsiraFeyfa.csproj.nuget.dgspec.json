@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SMT 5\\Junpro\\responssiiirafeyfa\\ResponsiraFeyfa.csproj": {}
+    "D:\\SMT 5\\Junpro\\512856_Rafeyfa-Asyla_RessponsiJuniorproject\\ResponsiraFeyfa.csproj": {}
   },
   "projects": {
-    "D:\\SMT 5\\Junpro\\responssiiirafeyfa\\ResponsiraFeyfa.csproj": {
+    "D:\\SMT 5\\Junpro\\512856_Rafeyfa-Asyla_RessponsiJuniorproject\\ResponsiraFeyfa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SMT 5\\Junpro\\responssiiirafeyfa\\ResponsiraFeyfa.csproj",
+        "projectUniqueName": "D:\\SMT 5\\Junpro\\512856_Rafeyfa-Asyla_RessponsiJuniorproject\\ResponsiraFeyfa.csproj",
         "projectName": "ResponsiraFeyfa",
-        "projectPath": "D:\\SMT 5\\Junpro\\responssiiirafeyfa\\ResponsiraFeyfa.csproj",
+        "projectPath": "D:\\SMT 5\\Junpro\\512856_Rafeyfa-Asyla_RessponsiJuniorproject\\ResponsiraFeyfa.csproj",
         "packagesPath": "C:\\Users\\L E N O V O\\.nuget\\packages\\",
-        "outputPath": "D:\\SMT 5\\Junpro\\responssiiirafeyfa\\obj\\",
+        "outputPath": "D:\\SMT 5\\Junpro\\512856_Rafeyfa-Asyla_RessponsiJuniorproject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
