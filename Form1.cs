@@ -102,9 +102,19 @@ namespace ResponsiraFeyfa
                         jumlahBug
                     );
                 }
+                else if (statusKontrak.Equals("Partime", StringComparison.OrdinalIgnoreCase))
+                {
+                    developer = new PartTimeDeveloper(
+                        0,
+                        txtNamaDeveloper.Text.Trim(),
+                        idProyek,
+                        fiturSelesai,
+                        jumlahBug
+                    );
+                }
                 else
                 {
-                    developer = new DeveloperFreelance(
+                    developer = new PartTimeDeveloper(
                         0,
                         txtNamaDeveloper.Text.Trim(),
                         idProyek,
@@ -204,9 +214,19 @@ namespace ResponsiraFeyfa
                         jumlahBug
                     );
                 }
+                else if (statusKontrak.Equals("Partime", StringComparison.OrdinalIgnoreCase))
+                {
+                    developer = new PartTimeDeveloper(
+                        selectedDevId,
+                        txtNamaDeveloper.Text.Trim(),
+                        idProyek,
+                        fiturSelesai,
+                        jumlahBug
+                    );
+                }
                 else
                 {
-                    developer = new DeveloperFreelance(
+                    developer = new PartTimeDeveloper(
                         selectedDevId,
                         txtNamaDeveloper.Text.Trim(),
                         idProyek,
